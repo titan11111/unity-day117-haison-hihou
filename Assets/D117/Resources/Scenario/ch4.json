@@ -1,0 +1,615 @@
+{
+ "title": "第4章 地下迷宮",
+ "start": "c4_open",
+ "nodes": [
+  {
+   "id": "c4_open",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "第四章　地下迷宮",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_001"
+    },
+    {
+     "who": "narr",
+     "text": "鐘楼の下の階段を降りきると、そこは石と木の梁でできた、迷路のような坑道だった。",
+     "voice": "d117_c4_002"
+    },
+    {
+     "who": "mio",
+     "text": "通った道は、わたしが全部描く。みんなは前を見てて。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_003"
+    },
+    {
+     "who": "gantz",
+     "text": "坑道は俺の庭みたいなもんだ。足元は任せろ。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c4_004"
+    },
+    {
+     "who": "lumi",
+     "text": "龍神の珠の反応は、迷宮の奥です。近づくほど、わたしは明るくなります。",
+     "lumiGlow": true,
+     "voice": "d117_c4_005"
+    }
+   ],
+   "bg": "under",
+   "place": "地下迷宮・入口",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_maze",
+   "type": "dungeon",
+   "chapter": 4,
+   "lines": [],
+   "bg": "black",
+   "place": "地下迷宮",
+   "map": "############/#S...P....##/#########.##/##..V.....##/##.#########/##.....T...#/##########.#/#H....D....#/#.##########/#G##########/############/############",
+   "events": "P:c4_pit,V:c4_vapor,T:c4_statue,D:c4_door,H:c4_helmet,G:c4_exit"
+  },
+  {
+   "id": "c4_pit",
+   "type": "choice",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "gantz",
+     "text": "止まれ！　その先の床、下が空洞だ。音が違う。",
+     "expr": "angry",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "angry"
+      }
+     ],
+     "voice": "d117_c4_006"
+    }
+   ],
+   "bg": "under",
+   "prompt": "床が抜けそうだ。どうする？",
+   "choices": [
+    {
+     "text": "一気に跳び越える",
+     "to": "c4_pit_jump"
+    },
+    {
+     "text": "ガンツの言う通り、端を伝って歩く",
+     "to": "c4_pit_edge",
+     "trust": "gantz"
+    }
+   ]
+  },
+  {
+   "id": "c4_pit_jump",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ズボッ！　着地した床が抜け、ユウマの片足が穴に落ちた！",
+     "flash": true,
+     "shake": true,
+     "se": "scare",
+     "life": -1,
+     "voice": "d117_c4_007"
+    },
+    {
+     "who": "yuma",
+     "text": "いってて……！",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c4_008"
+    },
+    {
+     "who": "gantz",
+     "text": "だから言ったろう。坑道をなめるな。",
+     "expr": "think",
+     "voice": "d117_c4_009"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_pit_edge",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "壁に背中をつけ、穴の縁を一歩ずつ進む。全員、無事に渡りきった。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_010"
+    },
+    {
+     "who": "gantz",
+     "text": "上出来だ、坊主。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c4_011"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_vapor",
+   "type": "choice",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "通路の床の割れ目から、ツンとにおう白い湯気が噴き出している。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_012"
+    },
+    {
+     "who": "eris",
+     "text": "待って！　これ、吸ったらまずいやつ。百年前に村を襲った湯気と同じだよ！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c4_013"
+    }
+   ],
+   "bg": "under",
+   "prompt": "毒の湯気だ。どうする？",
+   "choices": [
+    {
+     "text": "息を止めて走り抜ける",
+     "to": "c4_vapor_run"
+    },
+    {
+     "text": "エリスに中和してもらう",
+     "to": "c4_vapor_eris",
+     "trust": "eris",
+     "clue": "毒の湯気は鉱物の反応。中和できる"
+    }
+   ]
+  },
+  {
+   "id": "c4_vapor_run",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ゴホッ、ゴホッ！　走り抜けたものの、目と喉がひりひりする。",
+     "flash": true,
+     "se": "scare",
+     "life": -1,
+     "voice": "d117_c4_014"
+    },
+    {
+     "who": "eris",
+     "text": "もう、無茶するんだから！",
+     "expr": "angry",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "angry"
+      }
+     ],
+     "voice": "d117_c4_015"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_vapor_eris",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "eris",
+     "text": "この粉をまけば……よし！　湯気の毒が消えた！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c4_016"
+    },
+    {
+     "who": "eris",
+     "text": "やっぱり。この毒、龍神の珠の熱と、地下の鉱物が反応して出てるんだ。",
+     "expr": "think",
+     "voice": "d117_c4_017"
+    },
+    {
+     "who": "dante",
+     "text": "……熱と、鉱物の反応。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "dante",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_018"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_statue",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "回廊の両側に、苔むした石像がずらりと並んでいる。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_019"
+    },
+    {
+     "who": "narr",
+     "text": "ゴゴゴ……。石像の目が、蒼く光った。",
+     "se": "drop",
+     "voice": "d117_c4_020"
+    },
+    {
+     "who": "narr",
+     "text": "石像たちが、腕を振り上げて動き出した！",
+     "flash": true,
+     "shake": true,
+     "se": "scare",
+     "voice": "d117_c4_021"
+    },
+    {
+     "who": "leon",
+     "text": "数が多い！　でも動きは単純だ。順番に押し返せば抜けられる！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c4_022"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_statue_act"
+  },
+  {
+   "id": "c4_statue_act",
+   "type": "action",
+   "chapter": 4,
+   "lines": [],
+   "bg": "under",
+   "place": "罠突破：石像の回廊",
+   "title": "動き出した石像を、タップで押し返せ！",
+   "hits": 10,
+   "window": 1.4,
+   "sprite": "statue",
+   "next": "c4_statue_ok"
+  },
+  {
+   "id": "c4_statue_ok",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "最後の石像が、ゴトン、と元の台座に戻った。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_023"
+    },
+    {
+     "who": "gantz",
+     "text": "この仕掛け……酒場の骸骨と同じ作りだ。同じ人間が作ったんだな。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_024"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_door",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "行く手を、分厚い鉄の扉がふさいでいた。扉には、数字を合わせる古い錠前。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_025"
+    },
+    {
+     "who": "leon",
+     "text": "錠前の上に、何か刻まれている。「鐘の声を、ふたたび」……。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_026"
+    },
+    {
+     "who": "leon",
+     "text": "鐘の声。あの鐘は、二回、そして四回鳴った。",
+     "expr": "smile",
+     "voice": "d117_c4_027"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_door_q"
+  },
+  {
+   "id": "c4_door_q",
+   "type": "input",
+   "chapter": 4,
+   "lines": [],
+   "bg": "under",
+   "place": "数字錠",
+   "prompt": "錠前の数字を合わせよう",
+   "kana": "1234567890",
+   "answer": "24",
+   "note": "扉の文字：「鐘の声を、ふたたび」\n鐘楼の鐘：二回鳴って、間をおいて四回",
+   "noteLabel": "▼ 扉と鐘を見る",
+   "hint": "ヒントです。鐘楼の鐘は、何回、何回と鳴りましたか？",
+   "next": "c4_door_ok"
+  },
+  {
+   "id": "c4_door_ok",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "カチリ。重い扉が、ゆっくりと開いた。",
+     "se": "drop",
+     "voice": "d117_c4_028"
+    },
+    {
+     "who": "leon",
+     "text": "数字は、裏切らないね。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "trust": "leon",
+     "voice": "d117_c4_029"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_helmet",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "通路の行き止まりに、古びたヘルメットと、折りたたまれた手紙が置かれていた。",
+     "hasShow": true,
+     "show": [],
+     "cg": "helmet",
+     "voice": "d117_c4_030"
+    },
+    {
+     "who": "gantz",
+     "text": "これは……親父のヘルメットだ！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c4_031"
+    },
+    {
+     "who": "narr",
+     "text": "手紙には、震える字でこう書かれていた。",
+     "cg": "helmet",
+     "voice": "d117_c4_032"
+    },
+    {
+     "who": "narr",
+     "text": "「湯気にやられたところを、湯守の老人に助けられた。宝のことは、もういい。この村は、そっとしておくべきだ」",
+     "voice": "d117_c4_033"
+    },
+    {
+     "who": "gantz",
+     "text": "親父……生きて、ここを出たのか……？",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "fear"
+      }
+     ],
+     "clue": "ガンツの父は湯守に助けられた",
+     "trust": "gantz",
+     "voice": "d117_c4_034"
+    },
+    {
+     "who": "yuma",
+     "text": "きっとそうだよ。一緒に、確かめに行こう。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "smile"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c4_035"
+    }
+   ],
+   "bg": "under",
+   "next": "c4_maze"
+  },
+  {
+   "id": "c4_exit",
+   "type": "story",
+   "chapter": 4,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "迷宮の最奥。そこには、蒼く光る紋様が刻まれた、巨大な石の扉がそびえていた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c4_036"
+    },
+    {
+     "who": "lumi",
+     "text": "反応、最大です。……この扉の向こうに、龍神の珠があります。",
+     "lumiGlow": true,
+     "voice": "d117_c4_037"
+    },
+    {
+     "who": "dante",
+     "text": "……ついに、ここまで来たか。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "dante",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_038"
+    },
+    {
+     "who": "rosa",
+     "text": "ダンテさん。そろそろ、本当のことを話してくれてもいいんじゃない？",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "dante",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c4_039"
+    },
+    {
+     "who": "narr",
+     "text": "ダンテは答えず、ただ、封印された扉を見つめていた――。",
+     "voice": "d117_c4_040"
+    }
+   ],
+   "bg": "under",
+   "place": "迷宮の最奥",
+   "next": "c4_end"
+  },
+  {
+   "id": "c4_end",
+   "type": "end",
+   "chapter": 4,
+   "lines": [],
+   "bg": "black",
+   "title": "第4章　地下迷宮 ― 完",
+   "text": "第5章「封印された扉」へつづく"
+  }
+ ]
+}

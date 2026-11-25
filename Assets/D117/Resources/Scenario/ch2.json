@@ -1,0 +1,763 @@
+{
+ "title": "第2章 骸骨の酒場",
+ "start": "c2_open",
+ "nodes": [
+  {
+   "id": "c2_open",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "第二章　骸骨の酒場",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_001"
+    },
+    {
+     "who": "narr",
+     "text": "灯りの消えた酒場。床下から、コン……コン……と、規則的な音が響いている。",
+     "voice": "d117_c2_002"
+    },
+    {
+     "who": "rosa",
+     "text": "ちょっと……あそこ。椅子に、誰か座ってる。",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "rosa",
+       "pos": "C",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c2_003"
+    },
+    {
+     "who": "yuma",
+     "text": "が、骸骨……！",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c2_004"
+    },
+    {
+     "who": "gantz",
+     "text": "落ち着け。昔の盗掘者だろう。……音は、床下からだな。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_005"
+    },
+    {
+     "who": "lumi",
+     "text": "床下の音は、一定の間隔です。何かの仕掛けかもしれません。",
+     "voice": "d117_c2_006"
+    }
+   ],
+   "bg": "tavern",
+   "place": "骸骨の酒場",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_tavern",
+   "type": "explore",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ほこりをかぶったカウンター、倒れた椅子、壁際に並ぶ酒樽。隅の椅子には、骸骨が一体。",
+     "hasShow": true,
+     "show": [],
+     "cg": "skeleton",
+     "voice": "d117_c2_007"
+    },
+    {
+     "who": "yuma",
+     "text": "怖いけど……調べないと、先に進めないよな。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c2_008"
+    }
+   ],
+   "bg": "tavern",
+   "place": "骸骨の酒場",
+   "require": [
+    "diary",
+    "key"
+   ],
+   "exitText": "床下の扉を開ける",
+   "exitTo": "c2_floor",
+   "hint": "ヒントです。骸骨が、何かを握っていますね。それと、散らばった紙の順番が気になります。",
+   "choices": [
+    {
+     "text": "調べる：骸骨",
+     "to": "c2_skel",
+     "once": "skel"
+    },
+    {
+     "text": "調べる：散らばった紙",
+     "to": "c2_diary",
+     "once": "diary"
+    },
+    {
+     "text": "調べる：骸骨の握る手",
+     "to": "c2_key",
+     "once": "key",
+     "need": "skel"
+    },
+    {
+     "text": "見る：壁の張り紙",
+     "to": "c2_poster",
+     "once": "poster"
+    },
+    {
+     "text": "仲間に聞く：ダンテ",
+     "to": "c2_dante",
+     "once": "dantetalk"
+    },
+    {
+     "text": "調べる：酒樽",
+     "to": "c2_barrel",
+     "miss": true
+    },
+    {
+     "text": "骸骨にあいさつする",
+     "to": "c2_hello",
+     "miss": true
+    }
+   ]
+  },
+  {
+   "id": "c2_skel",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "骸骨は、古いつるはしを抱えたまま座っていた。足元には、ばらばらになった紙の束。",
+     "hasShow": true,
+     "show": [],
+     "cg": "skeleton",
+     "voice": "d117_c2_009"
+    },
+    {
+     "who": "eris",
+     "text": "服の生地からして、五十年くらい前の人かな。村人じゃなくて、外から来た人だね。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_010"
+    },
+    {
+     "who": "narr",
+     "text": "骨ばった右手が、何かを固く握りしめている。",
+     "cg": "skeleton",
+     "clue": "骸骨は五十年前の盗掘者",
+     "flag": "skel",
+     "voice": "d117_c2_011"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_diary",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "日付の消えかけた日記が、三枚。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_012"
+    },
+    {
+     "who": "leon",
+     "text": "順番がばらばらだ。中身から並べ直してみよう。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_013"
+    },
+    {
+     "who": "narr",
+     "text": "【ア】ついに地下への入口を見つけた。鐘の下だ。\n【イ】村に着いた。誰もいない。宝の噂は本当か。\n【ウ】床下から音がする。出られない。誰か――",
+     "voice": "d117_c2_014"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_diary_q"
+  },
+  {
+   "id": "c2_diary_q",
+   "type": "choice",
+   "chapter": 2,
+   "lines": [],
+   "bg": "tavern",
+   "prompt": "日記を正しい順に並べると？",
+   "choices": [
+    {
+     "text": "ア → イ → ウ",
+     "to": "c2_diary_ng"
+    },
+    {
+     "text": "イ → ア → ウ",
+     "to": "c2_diary_ok",
+     "clue": "盗掘者は「鐘の下」に地下への入口を見つけた",
+     "flag": "diary",
+     "trust": "leon"
+    },
+    {
+     "text": "ウ → イ → ア",
+     "to": "c2_diary_ng"
+    }
+   ]
+  },
+  {
+   "id": "c2_diary_ng",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "leon",
+     "text": "いや、それだと話がつながらない。村に着いたのは、いちばん最初のはずだ。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c2_015"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_diary_q"
+  },
+  {
+   "id": "c2_diary_ok",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "leon",
+     "text": "村に着き、鐘の下に入口を見つけ、そして……床下に閉じ込められた。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c2_016"
+    },
+    {
+     "who": "mio",
+     "text": "鐘の下……。反転した古地図だと、鐘楼は西。入口もそこね。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "mio",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_017"
+    },
+    {
+     "who": "narr",
+     "text": "手掛かり「鐘の下に地下への入口」を探検手帳に記した。",
+     "voice": "d117_c2_018"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_key",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "骸骨の指をそっと開くと、古い鉄の鍵が出てきた。",
+     "hasShow": true,
+     "show": [],
+     "cg": "skeleton",
+     "voice": "d117_c2_019"
+    },
+    {
+     "who": "sakura",
+     "text": "刻印があるわ。古い字で……「湯守」。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_020"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_key_q"
+  },
+  {
+   "id": "c2_key_q",
+   "type": "choice",
+   "chapter": 2,
+   "lines": [],
+   "bg": "tavern",
+   "prompt": "鍵の刻印「湯守」は、何と読む？",
+   "choices": [
+    {
+     "text": "ゆまもる",
+     "to": "c2_key_ng"
+    },
+    {
+     "text": "とうしゅ",
+     "to": "c2_key_ng"
+    },
+    {
+     "text": "ゆもり",
+     "to": "c2_key_ok",
+     "clue": "鍵の刻印「湯守」",
+     "flag": "key",
+     "trust": "sakura"
+    }
+   ]
+  },
+  {
+   "id": "c2_key_ng",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "sakura",
+     "text": "惜しいわね。湯を守る人、と書いて……。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c2_021"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_key_q"
+  },
+  {
+   "id": "c2_key_ok",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "sakura",
+     "text": "正解。湯守――温泉を守る役目の人のことよ。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c2_022"
+    },
+    {
+     "who": "dante",
+     "text": "湯守……。",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "dante",
+       "pos": "R",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c2_023"
+    },
+    {
+     "who": "narr",
+     "text": "その言葉を聞いた瞬間、ダンテの手が、小さく震えた。",
+     "voice": "d117_c2_024"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_poster",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "色あせた張り紙。かすれた文字で「湯の龍神さま　ご開帳」と読める。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_025"
+    },
+    {
+     "who": "yuma",
+     "text": "龍神……！　じいちゃんの巻物の絵と、同じだ！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c2_026"
+    },
+    {
+     "who": "narr",
+     "text": "ユウマは、祖父の形見の巻物を広げた。そこには鐘楼と、蒼く光る大きな珠が描かれていた。",
+     "cg": "gem_scroll",
+     "clue": "張り紙「湯の龍神さま ご開帳」",
+     "flag": "poster",
+     "voice": "d117_c2_027"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_dante",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "dante",
+     "text": "わしか？　なに、ただの金持ちの道楽だよ。宝探しは、男のロマンだからな！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "dante",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c2_028"
+    },
+    {
+     "who": "rosa",
+     "text": "……嘘をつくとき、人は少しだけ笑いすぎるのよね。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "dante",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_029"
+    },
+    {
+     "who": "dante",
+     "text": "は、はは。手厳しいな。",
+     "expr": "surprise",
+     "trust": "rosa",
+     "flag": "dantetalk",
+     "voice": "d117_c2_030"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_barrel",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "rosa",
+     "text": "百年物のお酒？　……さすがに、やめておくわ。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "rosa",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "yomi": "百年ものの、お酒？　……さすがに、やめておくわ。",
+     "voice": "d117_c2_031"
+    },
+    {
+     "who": "lumi",
+     "text": "賢明です。",
+     "voice": "d117_c2_032"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_hello",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "お、おじゃましてます……。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c2_033"
+    },
+    {
+     "who": "lumi",
+     "text": "ユウマさん。骸骨は、返事をしません。",
+     "voice": "d117_c2_034"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_tavern"
+  },
+  {
+   "id": "c2_floor",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "鍵を差し込むと、床の扉が、ギギ……と開いた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_035"
+    },
+    {
+     "who": "narr",
+     "text": "次の瞬間――。",
+     "voice": "d117_c2_036"
+    },
+    {
+     "who": "narr",
+     "text": "カタカタカタッ！　床下から、いくつもの骸骨が飛び出してきた！",
+     "flash": true,
+     "shake": true,
+     "se": "scare",
+     "voice": "d117_c2_037"
+    },
+    {
+     "who": "gantz",
+     "text": "仕掛け人形だ！　叩いて、押し戻せ！",
+     "expr": "angry",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "angry"
+      }
+     ],
+     "voice": "d117_c2_038"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_action"
+  },
+  {
+   "id": "c2_action",
+   "type": "action",
+   "chapter": 2,
+   "lines": [],
+   "bg": "tavern",
+   "place": "罠突破：骸骨の酒場",
+   "title": "飛び出す骸骨を、タップで押し戻せ！",
+   "hits": 8,
+   "window": 1.7,
+   "next": "c2_action_ok"
+  },
+  {
+   "id": "c2_action_ok",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "最後の一体を押し戻すと、カタン、と音がして、骸骨たちは動きを止めた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_039"
+    },
+    {
+     "who": "eris",
+     "text": "バネ仕掛けだ……。誰かが、侵入者を追い返すために作ったんだね。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "L",
+       "expr": "think"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c2_040"
+    },
+    {
+     "who": "gantz",
+     "text": "この作り……どこかで……。",
+     "expr": "think",
+     "voice": "d117_c2_041"
+    }
+   ],
+   "bg": "tavern",
+   "next": "c2_under"
+  },
+  {
+   "id": "c2_under",
+   "type": "story",
+   "chapter": 2,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "床下には、石造りの通路が、奥へと続いていた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c2_042"
+    },
+    {
+     "who": "lumi",
+     "text": "反応が強くなりました。……この先です。",
+     "lumiGlow": true,
+     "voice": "d117_c2_043"
+    },
+    {
+     "who": "mio",
+     "text": "この通路、鐘楼の方角へ、まっすぐ延びてる。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c2_044"
+    },
+    {
+     "who": "yuma",
+     "text": "よし、行こう！　龍神の珠は、きっとこの先だ！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "smile"
+      },
+      {
+       "id": "mio",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c2_045"
+    },
+    {
+     "who": "narr",
+     "text": "そのとき、通路の奥で、何かが動く音がした――。",
+     "voice": "d117_c2_046"
+    }
+   ],
+   "bg": "under",
+   "place": "地下通路の入口",
+   "next": "c2_end"
+  },
+  {
+   "id": "c2_end",
+   "type": "end",
+   "chapter": 2,
+   "lines": [],
+   "bg": "black",
+   "title": "第2章　骸骨の酒場 ― 完",
+   "text": "第3章「鳴らない鐘楼」へつづく",
+   "next": "c3_open"
+  }
+ ]
+}

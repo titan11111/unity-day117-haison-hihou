@@ -1,0 +1,645 @@
+{
+ "title": "第3章 鳴らない鐘楼",
+ "start": "c3_open",
+ "nodes": [
+  {
+   "id": "c3_open",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "第三章　鳴らない鐘楼",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c3_001"
+    },
+    {
+     "who": "narr",
+     "text": "地下通路の先の階段をのぼると、そこは鐘楼の真下だった。見上げれば、大きな青銅の釣鐘。",
+     "voice": "d117_c3_002"
+    },
+    {
+     "who": "yuma",
+     "text": "ここ……じいちゃんの巻物に描いてあった鐘楼だ！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c3_003"
+    },
+    {
+     "who": "sakura",
+     "text": "さっき鳴ったのは、この鐘ね。でも……誰が鳴らしたのかしら。",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "sakura",
+       "pos": "R",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c3_004"
+    },
+    {
+     "who": "lumi",
+     "text": "周囲に人の反応はありません。……ただ、鐘の下に、何かが隠されています。",
+     "lumiGlow": true,
+     "voice": "d117_c3_005"
+    }
+   ],
+   "bg": "tower",
+   "place": "鳴らない鐘楼",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_tower",
+   "type": "explore",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "鐘楼の足元には、苔むした石碑。軒先には、龍の木彫りの飾りが見下ろしている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c3_006"
+    },
+    {
+     "who": "yuma",
+     "text": "よし、手分けして調べよう！",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c3_007"
+    }
+   ],
+   "bg": "tower",
+   "place": "鳴らない鐘楼",
+   "require": [
+    "stele",
+    "scroll",
+    "bell"
+   ],
+   "exitText": "合言葉を唱える",
+   "exitTo": "c3_input_intro",
+   "hint": "ヒントです。石碑の文字と、鐘の鳴った回数。その二つを合わせると、言葉になりそうです。",
+   "choices": [
+    {
+     "text": "調べる：石碑",
+     "to": "c3_stele",
+     "once": "stele"
+    },
+    {
+     "text": "巻物と見比べる",
+     "to": "c3_scroll",
+     "once": "scroll"
+    },
+    {
+     "text": "鐘を鳴らす",
+     "to": "c3_bell",
+     "once": "bell",
+     "need": "stele"
+    },
+    {
+     "text": "移動：湯守の屋敷",
+     "to": "c3_mansion",
+     "once": "mansion"
+    },
+    {
+     "text": "仲間に聞く：ガンツ",
+     "to": "c3_gantz",
+     "once": "gantz3"
+    },
+    {
+     "text": "鐘の下で叫ぶ",
+     "to": "c3_shout",
+     "miss": true
+    },
+    {
+     "text": "見る：空",
+     "to": "c3_sky",
+     "miss": true
+    }
+   ]
+  },
+  {
+   "id": "c3_stele",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "石碑には、八つの文字が、番号と一緒に刻まれていた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c3_008"
+    },
+    {
+     "who": "narr",
+     "text": "一・り　二・た　三・の　四・ま　五・じ　六・ゆ　七・う　八・ん",
+     "voice": "d117_c3_009"
+    },
+    {
+     "who": "sakura",
+     "text": "その下にも一行。「鐘の声を数えよ。その数が、龍の眠る扉をひらく」……ですって。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "clue": "石碑：一り 二た 三の 四ま 五じ 六ゆ 七う 八ん",
+     "flag": "stele",
+     "voice": "d117_c3_010"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_scroll",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "じいちゃんの巻物と見比べてみる。……あれ？　何か違う。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "cg": "gem_scroll",
+     "voice": "d117_c3_011"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_scroll_q"
+  },
+  {
+   "id": "c3_scroll_q",
+   "type": "choice",
+   "chapter": 3,
+   "lines": [],
+   "bg": "tower",
+   "prompt": "巻物の鐘楼と、本物の鐘楼。違うところは？",
+   "choices": [
+    {
+     "text": "鐘の数",
+     "to": "c3_scroll_ng"
+    },
+    {
+     "text": "屋根の龍の飾りの向き",
+     "to": "c3_scroll_ok",
+     "clue": "巻物の龍は下を向いている＝入口は鐘の真下",
+     "flag": "scroll",
+     "trust": "mio"
+    },
+    {
+     "text": "柱の本数",
+     "to": "c3_scroll_ng"
+    }
+   ]
+  },
+  {
+   "id": "c3_scroll_ng",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "mio",
+     "text": "そこは同じみたい。もっと上の方、見て。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c3_012"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_scroll_q"
+  },
+  {
+   "id": "c3_scroll_ok",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "わかった！　本物の龍は空を見てるのに、巻物の龍は下を向いてる！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "smile"
+      },
+      {
+       "id": "mio",
+       "pos": "R",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c3_013"
+    },
+    {
+     "who": "mio",
+     "text": "龍の目線の先……つまり、鐘の真下ね！",
+     "expr": "surprise",
+     "voice": "d117_c3_014"
+    },
+    {
+     "who": "narr",
+     "text": "手掛かり「巻物の龍は下を向いている」を探検手帳に記した。",
+     "voice": "d117_c3_015"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_bell",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "gantz",
+     "text": "坊主、下がってろ。俺が鳴らす。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c3_016"
+    },
+    {
+     "who": "narr",
+     "text": "ガンツが撞木を引くと、鐘がひとりでに鳴りはじめた。",
+     "se": "bell",
+     "flash": true,
+     "voice": "d117_c3_017b"
+    },
+    {
+     "who": "narr",
+     "text": "ゴォン……ゴォン……。　――静寂。　ゴォン……ゴォン……ゴォン……ゴォン……。",
+     "voice": "d117_c3_018"
+    },
+    {
+     "who": "leon",
+     "text": "二回、間を置いて、四回。……数字の暗号だ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "L",
+       "expr": "surprise"
+      },
+      {
+       "id": "leon",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "clue": "鐘の声：二回、間を置いて四回",
+     "flag": "bell",
+     "trust": "leon",
+     "voice": "d117_c3_019"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_mansion",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "鐘楼の裏に、小さな屋敷があった。囲炉裏のそばに、古い帳面が開いたまま残っている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c3_020"
+    },
+    {
+     "who": "eris",
+     "text": "これ、日誌だよ。最後のページ……読むね。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c3_021"
+    },
+    {
+     "who": "narr",
+     "text": "「黒崎の掘削により、源泉より毒の湯気あふる。村人は皆、山向こうへ逃がした。龍神の珠は、我ら湯守が封ず」",
+     "yomi": "「黒崎の掘削により、源泉より毒の湯気あふる。村人は皆、山向こうへ逃がした。龍神の珠は、我ら湯守がふうず」",
+     "voice": "d117_c3_022"
+    },
+    {
+     "who": "dante",
+     "text": "……黒崎。",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "L",
+       "expr": "surprise"
+      },
+      {
+       "id": "dante",
+       "pos": "R",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c3_023"
+    },
+    {
+     "who": "rosa",
+     "text": "知ってる名前みたいね、ダンテさん。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "dante",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c3_024"
+    },
+    {
+     "who": "dante",
+     "text": "い、いや……。昔、どこかで聞いたような気がしただけだ。",
+     "expr": "think",
+     "clue": "湯守の日誌：村人は山向こうへ逃げのびた",
+     "flag": "mansion",
+     "trust": "rosa",
+     "voice": "d117_c3_025"
+    }
+   ],
+   "bg": "mansion",
+   "place": "湯守の屋敷",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_gantz",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "gantz",
+     "text": "……この鐘楼、親父の手紙に書いてあったのと同じだ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c3_026"
+    },
+    {
+     "who": "yuma",
+     "text": "ガンツさんのお父さん？",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "surprise"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c3_027"
+    },
+    {
+     "who": "gantz",
+     "text": "二十年前、この村に入ったきり帰ってこなかった。……俺は、親父を探しに来たんだ。",
+     "expr": "normal",
+     "trust": "gantz",
+     "flag": "gantz3",
+     "voice": "d117_c3_028"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_shout",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "おーい！　誰かいませんかー！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c3_029"
+    },
+    {
+     "who": "lumi",
+     "text": "やまびこしか返ってきません。ユウマさんの声が、三回。",
+     "voice": "d117_c3_030"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_sky",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "霧の向こうで、日が沈みかけている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c3_031"
+    },
+    {
+     "who": "lumi",
+     "text": "暗くなる前に、急いだほうがよさそうです。",
+     "voice": "d117_c3_032"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_tower"
+  },
+  {
+   "id": "c3_input_intro",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "leon",
+     "text": "鐘は二回、そして四回。石碑の二番と四番の文字を、順に読めば……。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "leon",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c3_033"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_input"
+  },
+  {
+   "id": "c3_input",
+   "type": "input",
+   "chapter": 3,
+   "lines": [],
+   "bg": "tower",
+   "place": "合言葉",
+   "prompt": "石碑の文字で、合言葉を入力しよう",
+   "kana": "りたのまじゆうん",
+   "answer": "たま",
+   "note": "石碑：一り 二た 三の 四ま 五じ 六ゆ 七う 八ん\n鐘：二回鳴って、間をおいて四回",
+   "noteLabel": "▼ 石碑と鐘を見る",
+   "hint": "ヒントです。鐘は「二回」、そして「四回」。石碑の二番目と四番目の文字です。",
+   "next": "c3_open_gate"
+  },
+  {
+   "id": "c3_open_gate",
+   "type": "story",
+   "chapter": 3,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "「たま」――そう唱えた瞬間、鐘楼の床板が、音を立てて沈んでいった。",
+     "shake": true,
+     "se": "drop",
+     "voice": "d117_c3_034"
+    },
+    {
+     "who": "sakura",
+     "text": "珠……！　龍神の珠のことね！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c3_035"
+    },
+    {
+     "who": "narr",
+     "text": "床の下には、闇の奥へと続く石の階段。ひんやりとした風が吹き上げてくる。",
+     "voice": "d117_c3_036"
+    },
+    {
+     "who": "mio",
+     "text": "この先は、地図にも載ってない。……迷宮よ。",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "yuma",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c3_037"
+    },
+    {
+     "who": "yuma",
+     "text": "大丈夫。みんながいる。行こう！",
+     "expr": "smile",
+     "voice": "d117_c3_038"
+    },
+    {
+     "who": "lumi",
+     "text": "光を強くします。足元に気をつけて。",
+     "lumiGlow": true,
+     "voice": "d117_c3_039"
+    }
+   ],
+   "bg": "tower",
+   "next": "c3_end"
+  },
+  {
+   "id": "c3_end",
+   "type": "end",
+   "chapter": 3,
+   "lines": [],
+   "bg": "black",
+   "title": "第3章　鳴らない鐘楼 ― 完",
+   "text": "第4章「地下迷宮」へつづく",
+   "next": "c4_open"
+  }
+ ]
+}

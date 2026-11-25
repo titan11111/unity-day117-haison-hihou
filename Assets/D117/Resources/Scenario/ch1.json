@@ -1,0 +1,1156 @@
+{
+ "title": "第1章 誰もいない村",
+ "start": "c1_open",
+ "nodes": [
+  {
+   "id": "c1_open",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "「その村に入った者は、宝を見つけるまで帰れない。」",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_001"
+    },
+    {
+     "who": "narr",
+     "text": "山奥の地図から消えた村――隠れ湯村。百年前のある夜、村人がひとり残らず姿を消したという。",
+     "voice": "d117_c1_002"
+    },
+    {
+     "who": "narr",
+     "text": "そして今、八人のお宝ハンターが、その村の入口に立っていた。",
+     "voice": "d117_c1_003"
+    }
+   ],
+   "bg": "black",
+   "place": "",
+   "next": "c1_gate"
+  },
+  {
+   "id": "c1_gate",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "ここが隠れ湯村……！　じいちゃんの巻物と、同じ景色だ！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_004"
+    },
+    {
+     "who": "leon",
+     "text": "地図によれば、この村の地下に眠っているのが――世界最大の宝石『龍神の珠』だ。",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "leon",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c1_005"
+    },
+    {
+     "who": "sakura",
+     "text": "龍神の珠……。一度でいいから、この手で鑑定してみたかったの。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "sakura",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_006"
+    },
+    {
+     "who": "gantz",
+     "text": "浮かれるなよ、坊主。この霧じゃ、一歩先も分からん。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_007"
+    },
+    {
+     "who": "rosa",
+     "text": "いいじゃない。賭けは、降りた方が負けよ。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_008"
+    },
+    {
+     "who": "dante",
+     "text": "資金も装備も、全部わしが用意した。さあ、楽しい宝探しの始まりだ！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "rosa",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "dante",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_009"
+    },
+    {
+     "who": "mio",
+     "text": "……ねえ、レオンさん。その古地図、あとで見せてもらえる？",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "L",
+       "expr": "think"
+      },
+      {
+       "id": "leon",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c1_010"
+    },
+    {
+     "who": "eris",
+     "text": "その前に紹介するね！　わたしの自信作、ルミ！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "eris",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_011"
+    },
+    {
+     "who": "lumi",
+     "text": "はじめまして。案内役のルミです。皆さんが迷子になる確率は、現在八十七パーセントです。",
+     "lumiGlow": true,
+     "voice": "d117_c1_012"
+    },
+    {
+     "who": "yuma",
+     "text": "高っ！？",
+     "expr": "surprise",
+     "yomi": "たかっ！？",
+     "voice": "d117_c1_013"
+    },
+    {
+     "who": "lumi",
+     "text": "なお、宝石に近づくほど、わたしは明るく光ります。せいぜい頼りにしてください。",
+     "voice": "d117_c1_014"
+    }
+   ],
+   "bg": "gate",
+   "place": "隠れ湯村・入口",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_square",
+   "type": "explore",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "崩れた家々が並ぶ広場。中央には苔むした井戸、その向こうに古い鐘楼が霧の中にそびえている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_015"
+    },
+    {
+     "who": "yuma",
+     "text": "よし、まずはこの広場から調べよう！",
+     "expr": "normal",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c1_016"
+    }
+   ],
+   "bg": "square",
+   "place": "朽ちた広場",
+   "require": [
+    "map",
+    "warm"
+   ],
+   "exitText": "村の奥へ進む",
+   "exitTo": "c1_bridge",
+   "hint": "ヒントです。古地図をよく見てください。それから、湯気の立つ建物も気になりますね。",
+   "choices": [
+    {
+     "text": "見る：古地図",
+     "to": "c1_map",
+     "once": "map"
+    },
+    {
+     "text": "調べる：崩れた家",
+     "to": "c1_house",
+     "once": "house"
+    },
+    {
+     "text": "調べる：井戸",
+     "to": "c1_well",
+     "once": "well"
+    },
+    {
+     "text": "見る：鐘楼",
+     "to": "c1_tower",
+     "once": "tower"
+    },
+    {
+     "text": "移動：湯気の立つ建物",
+     "to": "c1_bath",
+     "once": "warm"
+    },
+    {
+     "text": "仲間に聞く：ガンツ",
+     "to": "c1_gantz",
+     "once": "gantztalk"
+    },
+    {
+     "text": "調べる：地面",
+     "to": "c1_ground",
+     "miss": true
+    },
+    {
+     "text": "ルミをなでる",
+     "to": "c1_pet",
+     "miss": true
+    }
+   ]
+  },
+  {
+   "id": "c1_map",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "mio",
+     "text": "やっぱり変。地図だと鐘楼は村の東。でも、本当は西にあるの。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "L",
+       "expr": "think"
+      },
+      {
+       "id": "leon",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c1_017"
+    },
+    {
+     "who": "leon",
+     "text": "地図が間違っている、と？",
+     "expr": "think",
+     "voice": "d117_c1_018"
+    },
+    {
+     "who": "mio",
+     "text": "井戸も、湯屋も、ぜんぶ反対側。まるで……",
+     "expr": "think",
+     "voice": "d117_c1_019"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_map_q"
+  },
+  {
+   "id": "c1_map_q",
+   "type": "choice",
+   "chapter": 1,
+   "lines": [],
+   "bg": "square",
+   "prompt": "地図のずれの正体は？",
+   "choices": [
+    {
+     "text": "上下が逆になっている",
+     "to": "c1_map_ng"
+    },
+    {
+     "text": "左右が反転している",
+     "to": "c1_map_ok",
+     "clue": "古地図は左右が反転している",
+     "flag": "map",
+     "trust": "mio"
+    },
+    {
+     "text": "縮尺が違う",
+     "to": "c1_map_ng"
+    }
+   ]
+  },
+  {
+   "id": "c1_map_ng",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "mio",
+     "text": "うーん……それだと、井戸の位置が合わないよ。",
+     "expr": "normal",
+     "voice": "d117_c1_020"
+    },
+    {
+     "who": "lumi",
+     "text": "ヒントです。鏡に映すと、どう見えますか？",
+     "voice": "d117_c1_021"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_map_q"
+  },
+  {
+   "id": "c1_map_ok",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "mio",
+     "text": "そう、左右が反転してる！　鏡に映して描かれた地図なんだ。",
+     "expr": "smile",
+     "voice": "d117_c1_022"
+    },
+    {
+     "who": "leon",
+     "text": "わざと読めないように、か。この地図を描いた人間は、何かを隠したかったようだね。",
+     "expr": "surprise",
+     "voice": "d117_c1_023"
+    },
+    {
+     "who": "narr",
+     "text": "手掛かり『左右反転の古地図』を探検手帳に記した。",
+     "voice": "d117_c1_024"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_house",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "傾いた家の中には、ちゃぶ台の上に茶碗が並んだまま残っていた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_025"
+    },
+    {
+     "who": "rosa",
+     "text": "食事の途中で、みんな消えたってこと……？",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "rosa",
+       "pos": "C",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c1_026"
+    },
+    {
+     "who": "eris",
+     "text": "ううん、見て。荷物を入れる行李が空っぽ。慌てて持ち出したんだよ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "rosa",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "eris",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "clue": "村人は荷物をまとめて出ていった",
+     "flag": "house",
+     "voice": "d117_c1_027"
+    },
+    {
+     "who": "narr",
+     "text": "手掛かり『村人は荷物をまとめて出ていった』を探検手帳に記した。",
+     "voice": "d117_c1_028"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_well",
+   "type": "choice",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "井戸をのぞき込むと、暗い底から、生ぬるい風が吹き上げてきた。",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c1_029"
+    },
+    {
+     "who": "yuma",
+     "text": "なんだこれ……あったかい？",
+     "expr": "surprise",
+     "voice": "d117_c1_030"
+    }
+   ],
+   "bg": "square",
+   "prompt": "井戸をどう調べる？",
+   "choices": [
+    {
+     "text": "石を落として深さを測る",
+     "to": "c1_well_stone",
+     "flag": "well",
+     "clue": "井戸の底がかすかに蒼く光る"
+    },
+    {
+     "text": "身を乗り出してのぞく",
+     "to": "c1_well_lean"
+    }
+   ]
+  },
+  {
+   "id": "c1_well_stone",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "……ポチャン。思ったより浅い。そして、水面がかすかに蒼く光った気がした。",
+     "se": "drop",
+     "voice": "d117_c1_031"
+    },
+    {
+     "who": "lumi",
+     "text": "……今、わたし、少しだけ明るくなりました。",
+     "lumiGlow": true,
+     "voice": "d117_c1_032"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_well_lean",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ガラッ！　足元の石が崩れた！",
+     "flash": true,
+     "shake": true,
+     "se": "scare",
+     "life": -1,
+     "voice": "d117_c1_033"
+    },
+    {
+     "who": "gantz",
+     "text": "危ねえ！",
+     "expr": "angry",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "angry"
+      }
+     ],
+     "voice": "d117_c1_034"
+    },
+    {
+     "who": "narr",
+     "text": "ガンツの太い腕が、ユウマの襟首をつかんで引き戻した。",
+     "voice": "d117_c1_035"
+    },
+    {
+     "who": "gantz",
+     "text": "この村の石は、全部もろい。次から気をつけろ。",
+     "expr": "normal",
+     "voice": "d117_c1_036"
+    },
+    {
+     "who": "yuma",
+     "text": "た、助かった……。",
+     "expr": "fear",
+     "voice": "d117_c1_037"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_tower",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "霧の向こうの鐘楼。大きな釣鐘が、吊られたままになっている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_038"
+    },
+    {
+     "who": "sakura",
+     "text": "あの鐘、百年前から一度も鳴っていないそうよ。言い伝えでは……『鐘が鳴るとき、龍が目を覚ます』。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "sakura",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_039"
+    },
+    {
+     "who": "yuma",
+     "text": "じいちゃんの巻物にも、鐘楼が描いてあった……。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "think"
+      },
+      {
+       "id": "sakura",
+       "pos": "R",
+       "expr": "normal"
+      }
+     ],
+     "clue": "鐘が鳴るとき、龍が目を覚ます",
+     "flag": "tower",
+     "voice": "d117_c1_040"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_gantz",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "gantz",
+     "text": "……実はな、坊主。俺はこの村、初めてじゃねえ気がするんだ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_041"
+    },
+    {
+     "who": "yuma",
+     "text": "えっ？",
+     "expr": "surprise",
+     "voice": "d117_c1_042"
+    },
+    {
+     "who": "gantz",
+     "text": "いや、なんでもねえ。昔のことだ。先を急ごう。",
+     "expr": "normal",
+     "trust": "gantz",
+     "flag": "gantztalk",
+     "voice": "d117_c1_043"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_pet",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "yuma",
+     "text": "よしよし、ルミ。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "smile"
+      },
+      {
+       "id": "eris",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_044"
+    },
+    {
+     "who": "lumi",
+     "text": "……わたしはランタンです。なでても、明るさは変わりません。",
+     "voice": "d117_c1_045"
+    },
+    {
+     "who": "eris",
+     "text": "あはは、照れてる照れてる！",
+     "expr": "smile",
+     "voice": "d117_c1_046"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_ground",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "地面を調べた。……ただの地面だ。",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "C",
+       "expr": "normal"
+      }
+     ],
+     "voice": "d117_c1_047"
+    },
+    {
+     "who": "lumi",
+     "text": "ユウマさん、それは地面です。",
+     "voice": "d117_c1_048"
+    }
+   ],
+   "bg": "square",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_bath",
+   "type": "choice",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "『隠れ湯』と書かれた額が傾いた湯屋。湯船は乾いているのに、かすかに湯気が漂っている。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_049"
+    },
+    {
+     "who": "eris",
+     "text": "待って、この岩……まだ温かい！　百年も前に枯れた温泉なのに！",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c1_050"
+    }
+   ],
+   "bg": "bath",
+   "place": "枯れた湯屋",
+   "prompt": "どうする？",
+   "choices": [
+    {
+     "text": "岩に触ってみる",
+     "to": "c1_bath_touch"
+    },
+    {
+     "text": "エリスに調べてもらう",
+     "to": "c1_bath_eris",
+     "trust": "eris"
+    },
+    {
+     "text": "ルミを近づける",
+     "to": "c1_bath_lumi",
+     "trust": "eris"
+    }
+   ]
+  },
+  {
+   "id": "c1_bath_touch",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ジュッ！",
+     "flash": true,
+     "se": "scare",
+     "life": -1,
+     "voice": "d117_c1_051"
+    },
+    {
+     "who": "yuma",
+     "text": "あっちぃ！",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "eris",
+       "pos": "R",
+       "expr": "angry"
+      }
+     ],
+     "voice": "d117_c1_052"
+    },
+    {
+     "who": "eris",
+     "text": "もう、だから待ってって言ったのに！",
+     "expr": "angry",
+     "voice": "d117_c1_053"
+    }
+   ],
+   "bg": "bath",
+   "next": "c1_bath_after"
+  },
+  {
+   "id": "c1_bath_eris",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "eris",
+     "text": "岩の奥から熱が伝わってきてる。地下のどこかに、すごく熱いものがあるんだ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_054"
+    }
+   ],
+   "bg": "bath",
+   "next": "c1_bath_after"
+  },
+  {
+   "id": "c1_bath_lumi",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "ルミの光が、ふっと蒼く強まった。",
+     "lumiGlow": true,
+     "voice": "d117_c1_055"
+    },
+    {
+     "who": "lumi",
+     "text": "反応あり。この下に、何か大きなものがあります。",
+     "voice": "d117_c1_056"
+    },
+    {
+     "who": "eris",
+     "text": "宝石レーダー、大成功！",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_057"
+    }
+   ],
+   "bg": "bath",
+   "next": "c1_bath_after"
+  },
+  {
+   "id": "c1_bath_after",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "dante",
+     "text": "……地下の熱、か。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "eris",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "dante",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_058"
+    },
+    {
+     "who": "narr",
+     "text": "ダンテが一瞬だけ、険しい顔をした。",
+     "clue": "湯屋の岩が今も温かい",
+     "flag": "warm",
+     "voice": "d117_c1_059"
+    }
+   ],
+   "bg": "bath",
+   "next": "c1_square"
+  },
+  {
+   "id": "c1_bridge",
+   "type": "choice",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "村の奥へ続く道は、深い谷にかかる古い吊り橋で途切れていた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_060"
+    },
+    {
+     "who": "gantz",
+     "text": "板が何枚か腐ってやがる。全員で一度に渡るのは無理だ。",
+     "expr": "think",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "gantz",
+       "pos": "R",
+       "expr": "think"
+      }
+     ],
+     "voice": "d117_c1_061"
+    },
+    {
+     "who": "rosa",
+     "text": "さあ、どうする？　主人公さん。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "normal"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_062"
+    }
+   ],
+   "bg": "bridge",
+   "place": "谷の吊り橋",
+   "prompt": "どうやって渡る？",
+   "choices": [
+    {
+     "text": "一気に走って渡る",
+     "to": "c1_bridge_run",
+     "trust": "rosa"
+    },
+    {
+     "text": "ガンツに板を確かめてもらう",
+     "to": "c1_bridge_gantz",
+     "trust": "gantz"
+    },
+    {
+     "text": "ミオに別の道を探してもらう",
+     "to": "c1_bridge_mio",
+     "need": "map",
+     "trust": "mio",
+     "clue": "谷の石段（地図の隠し道）"
+    }
+   ]
+  },
+  {
+   "id": "c1_bridge_run",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "バキッ！　板が割れ、ユウマの片足が宙に浮く！",
+     "flash": true,
+     "shake": true,
+     "se": "scare",
+     "life": -1,
+     "voice": "d117_c1_063"
+    },
+    {
+     "who": "yuma",
+     "text": "うわあああっ！",
+     "expr": "fear",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "fear"
+      },
+      {
+       "id": "rosa",
+       "pos": "R",
+       "expr": "surprise"
+      }
+     ],
+     "voice": "d117_c1_064"
+    },
+    {
+     "who": "rosa",
+     "text": "つかまって！",
+     "expr": "surprise",
+     "voice": "d117_c1_065"
+    },
+    {
+     "who": "narr",
+     "text": "ローザが手を伸ばし、ユウマはなんとか向こう岸へ転がり込んだ。",
+     "voice": "d117_c1_066"
+    }
+   ],
+   "bg": "bridge",
+   "next": "c1_bridge_end"
+  },
+  {
+   "id": "c1_bridge_gantz",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "gantz",
+     "text": "よし、青い印をつけた板だけ踏め。それ以外は信用するな。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "gantz",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_067"
+    },
+    {
+     "who": "narr",
+     "text": "一人ずつ、慎重に。八人とルミは、無事に谷を渡りきった。",
+     "voice": "d117_c1_068"
+    }
+   ],
+   "bg": "bridge",
+   "next": "c1_bridge_end"
+  },
+  {
+   "id": "c1_bridge_mio",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "mio",
+     "text": "反転した地図で見ると……谷の下に、古い石段があるはず。",
+     "expr": "smile",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "mio",
+       "pos": "C",
+       "expr": "smile"
+      }
+     ],
+     "voice": "d117_c1_069"
+    },
+    {
+     "who": "narr",
+     "text": "ミオの言う通り、霧に隠れた石段が見つかった。遠回りだが、確実な道だ。",
+     "voice": "d117_c1_070"
+    }
+   ],
+   "bg": "bridge",
+   "next": "c1_bridge_end"
+  },
+  {
+   "id": "c1_bridge_end",
+   "type": "story",
+   "chapter": 1,
+   "lines": [
+    {
+     "who": "narr",
+     "text": "谷を越えた先に、灯りの消えた酒場が見えた。",
+     "hasShow": true,
+     "show": [],
+     "voice": "d117_c1_071"
+    },
+    {
+     "who": "narr",
+     "text": "そのとき――。",
+     "voice": "d117_c1_072"
+    },
+    {
+     "who": "narr",
+     "text": "ゴォォォン……。",
+     "flash": true,
+     "se": "bell",
+     "voice": "d117_c1_073"
+    },
+    {
+     "who": "yuma",
+     "text": "か、鐘が……鳴った！？",
+     "expr": "surprise",
+     "hasShow": true,
+     "show": [
+      {
+       "id": "yuma",
+       "pos": "L",
+       "expr": "surprise"
+      },
+      {
+       "id": "sakura",
+       "pos": "R",
+       "expr": "fear"
+      }
+     ],
+     "voice": "d117_c1_074"
+    },
+    {
+     "who": "sakura",
+     "text": "百年、鳴らなかったはずの鐘が……。",
+     "expr": "fear",
+     "voice": "d117_c1_075"
+    },
+    {
+     "who": "lumi",
+     "text": "皆さん、注意してください。……酒場の床下から、規則的な音がします。",
+     "lumiGlow": true,
+     "voice": "d117_c1_076"
+    }
+   ],
+   "bg": "bridge",
+   "next": "c1_end"
+  },
+  {
+   "id": "c1_end",
+   "type": "end",
+   "chapter": 1,
+   "lines": [],
+   "bg": "black",
+   "title": "第1章　誰もいない村 ― 完",
+   "text": "第2章「骸骨の酒場」へつづく",
+   "next": "c2_open"
+  }
+ ]
+}
